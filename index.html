@@ -72,6 +72,14 @@
                 <code><span class="line-number"> 1.</span> <span class="syntax">OUTPUT</span> <var>variable</var></code>
               </div>
             </li>
+            <li>
+              Note: you can input and output multiple times in 1 INPUT / OUTPUT <div class="code-container">
+                <code>
+                  <span class="line-number"> 1.</span> <span class="syntax">INPUT</span> <var>variable1</var> <span class="syntax">,</span> <var>variable2</var> <span class="comment">...</span> <br>
+                  <span class="line-number"> 2.</span> <span class="syntax">OUTPUT</span> <var>variable1</var> <span class="syntax">,</span> <var>variable2</var> <span class="comment">...</span>
+                </code>
+              </div>
+            </li>
           </ul>
         </li>
 
@@ -303,6 +311,40 @@
       <ul>
         <li>
           <details>
+            <summary>Validating user's input</summary>
+            <ul>
+              <h3>For this example I am validating if the input is an integer</h3>
+              <li>Using WHILE</li>
+              <li>
+                <div class="code-container">
+                  <code>
+                    <span class="line-number"> 1.</span> <span class="syntax">DECLARE</span> <var>inputVar</var><span class="syntax">:</span> <span class="data-type">INTEGER</span> <br>
+                    <span class="line-number"> 2.</span> <br>
+                    <span class="line-number"> 3.</span> <span class="syntax">INPUT</span> <var>inputVar</var> <br>
+                    <span class="line-number"> 4.</span> <br>
+                    <span class="line-number"> 5.</span> <span class="syntax">WHILE</span> <var>inputVar</var> <span class="syntax"><</span> 0 <span class="syntax">OR</span> <var>inputVar</var> <span class="syntax"><></span> <span class="function">INT</span><span class="syntax">(</span><var>inputVar</var><span class="syntax">)</span> <br>
+                    <span class="line-number"> 6.</span>     <span class="syntax">INPUT</span> <var>inputVar</var> <br>
+                    <span class="line-number"> 7.</span> <span class="syntax">ENDWHILE</span>
+                  </code>
+                </div>
+              </li>
+              <li>Using REPEAT</li>
+              <li>
+                <div class="code-container">
+                  <code>
+                      <span class="line-number"> 1.</span> <span class="syntax">DECLARE</span> <var>inputVar</var><span class="syntax">:</span> <span class="data-type">INTEGER</span> <br> 
+                      <span class="line-number"> 2.</span> <br> 
+                      <span class="line-number"> 3.</span> <span class="syntax">REPEAT</span> <br> 
+                      <span class="line-number"> 4.</span>     <span class="syntax">INPUT</span> <var>inputVar</var> <br> 
+                      <span class="line-number"> 5.</span> <span class="syntax">UNTIL</span> <var>inputVar</var> <span class="syntax">></span> 0 <span class="syntax">AND</span> <var>inputVar</var> <span class="syntax"> = </span> <span class="function">INT</span><span class="syntax">(</span><var>inputVar</var><span class="syntax">)</span> <br> 
+                  </code>
+                </div>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
             <summary>Finding maximum, minimum, total and average of an array</summary>
             <ul>
               <li>
@@ -331,7 +373,7 @@
                   <span class="line-number">21.</span>         <var>maximum</var> <span class="syntax"> = </span> <var>list</var><span class="syntax">[</span><var>i</var><span class="syntax">]</span> <br>
                   <span class="line-number">22.</span>     <span class="syntax">ENDIF</span> <br>
                   <span class="line-number">23.</span>     <br>
-                  <span class="line-number">24.</span>     <span class="syntax">IF</span> <var>list</var><span class="syntax">[</span><var>i</var><span class="syntax">] ></span> <var>minimum</var> <span class="syntax">THEN</span> <br>
+                  <span class="line-number">24.</span>     <span class="syntax">IF</span> <var>list</var><span class="syntax">[</span><var>i</var><span class="syntax">] <</span> <var>minimum</var> <span class="syntax">THEN</span> <br>
                   <span class="line-number">25.</span>         <var>minimum</var> <span class="syntax"> = </span> <var>list</var><span class="syntax">[</span><var>i</var><span class="syntax">]</span> <br>
                   <span class="line-number">26.</span>     <span class="syntax">ENDIF</span> <br>
                   <span class="line-number">27.</span> <br>
