@@ -150,6 +150,10 @@ code {
     color: #fce566;
 }
 
+.function {
+    color: #5ad4e6;
+}
+
 a,
 .blue {
     color: #76a6d0;
@@ -161,9 +165,18 @@ a:hover {
 }
 
 @media screen and (max-width: 1024px) {
+    header {
+        height: 3rem;
+    }
+
+    header h1 {
+        font-size: 20pt;
+    }
+
     main {
         width: 90%;
         padding: 1rem 5%;
+        min-height: calc(100dvh - 10.5rem - 12pt);
     }
 }
 
