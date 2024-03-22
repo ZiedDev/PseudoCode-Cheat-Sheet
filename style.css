@@ -181,6 +181,10 @@ a:hover {
 }
 
 @media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 18pt;
+    }
+
     main {
         width: 95%;
         padding: 1rem 2.5%;
