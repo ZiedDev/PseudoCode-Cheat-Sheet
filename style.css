@@ -85,7 +85,8 @@ main {
     background-color: #0D1117;
     min-height: calc(100dvh - 12.5rem - 12pt);
     width: 70%;
-    margin: 1rem auto;
+    padding: 1rem 15%;
+    margin: 0 auto;
 }
 
 .main-details {
@@ -162,12 +163,14 @@ a:hover {
 @media screen and (max-width: 1024px) {
     main {
         width: 90%;
+        padding: 1rem 5%;
     }
 }
 
 @media screen and (max-width: 768px) {
     main {
         width: 95%;
+        padding: 1rem 2.5%;
     }
 
     ul {
