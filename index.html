@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PseudoCode Cheat Sheet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>PseudoCode Cheat Sheet</h1>
+  </header>
+  <main>
+    <details open class="main-details">
+      <summary>Syntax</summary>
+      <ul>
+        <li>
+          <h3>Data types</h3>
+          <ul>
+            <li>
+              <h4>STRING <span class="comment">(a string of characters)</span></h4>
+            </li>
+            <li>
+              <h4>CHAR <span class="comment">(a single character)</span></h4>
+            </li>
+            <li>
+              <h4>INTEGER <span class="comment">(an integer number)</span></h4>
+            </li>
+            <li>
+              <h4>REAL <span class="comment">(a real number (can contain decimals))</span></h4>
+            </li>
+            <li>
+              <h4>BOOLEAN <span class="comment">(a true or false)</span></h4>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>Declaration</h3>
+          <ul>
+            <li>Variable <div class="code-container">
+                <code><span class="line-number"> 1.</span> <span class="syntax">DECLARE</span> variableName<span class="syntax">:</span> <span class="data-type">DataType</span> </code>
+              </div>
+            </li>
+            <li>Constant <div class="code-container">
+                <code><span class="line-number"> 1.</span> <span class="syntax">CONSTANT</span> constantName<span class="syntax">:</span> <span class="data-type">DataType</span> <span class="syntax"> = </span> Value </code>
+              </div>
+            </li>
+            <li>Array <div class="code-container">
+                <code><span class="line-number"> 1.</span> <span class="syntax">DECLARE</span> arrayName<span class="syntax">:</span> <span class="data-type">ARRAY</span><span class="syntax">[</span>startIndex <span class="syntax">:</span> endIndex<span class="syntax">] OF</span> <span class="data-type">DataType</span> </code>
+              </div>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>Input / Output</h3>
+          <ul>
+            <li>
+              Input <div class="code-container">
+                <code><span class="line-number"> 1.</span> <span class="syntax">INPUT</span> variable</code>
+              </div>
+            </li>
+            <li>
+              Output <div class="code-container">
+                <code><span class="line-number"> 1.</span> <span class="syntax">OUTPUT</span> variable </code>
+              </div>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>If statement</h3>
+          <ul>
+            <li>
+              Regular IF
+              <ul>
+                <li>
+                  <div class="code-container">
+                    <code>
+                    <span class="line-number"> 1.</span> <span class="syntax">IF</span> <span class="condition">condition</span> <span class="syntax">THEN</span> <br>
+                    <span class="line-number"> 2.</span>       <span class="comment"># code</span> <br>
+                    <span class="line-number"> 3.</span> <span class="syntax">ENDIF</span>
+                    </code>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              IF with ELSE
+              <ul>
+                <li>
+                  <div class="code-container">
+                    <code>
+                    <span class="line-number"> 1.</span> <span class="syntax">IF</span> <span class="condition">condition</span> <span class="syntax">THEN</span> <br>
+                    <span class="line-number"> 2.</span>     <span class="comment"># code</span> <br>
+                    <span class="line-number"> 3.</span> <span class="syntax">ELSE</span> <br>
+                    <span class="line-number"> 4.</span>     <span class="comment"># code</span> <br>
+                    <span class="line-number"> 5.</span> <span class="syntax">ENDIF</span>
+                    </code>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              ID with ELSE IF
+              <ul>
+                <li>
+                  <div class="code-container">
+                    <code>
+                    <span class="line-number"> 1.</span> <span class="syntax">IF</span> <span class="condition">condition</span> <span class="syntax">THEN</span> <br>
+                    <span class="line-number"> 2.</span>     <span class="comment"># code</span> <br>
+                    <span class="line-number"> 3.</span> <span class="syntax">ELSE IF</span> <span class="condition">condition</span> <span class="syntax">THEN</span> <br>
+                    <span class="line-number"> 4.</span>     <span class="comment"># code</span> <br>
+                    <span class="line-number"> 5.</span> <span class="syntax">ELSE</span> <br>
+                    <span class="line-number"> 6.</span>     <span class="comment"># code</span> <br>
+                    <span class="line-number"> 7.</span> <span class="syntax">ENDIF</span>
+                    </code>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>Case of</h3>
+          <ul>
+            <li>
+              <div class="code-container">
+                <code>
+                <span class="line-number"> 1.</span> <span class="syntax">CASE</span> variable <span class="syntax">OF</span> <br>
+                <span class="line-number"> 2.</span>     value1<span class="syntax">:</span> statement <br>
+                <span class="line-number"> 3.</span>     value2<span class="syntax">:</span> statement <br>
+                <span class="line-number"> 4.</span>     value3<span class="syntax">:</span> statement <br>
+                <span class="line-number"> 5.</span>     OTHERWISE<span class="syntax">:</span> statement <br>
+                <span class="line-number"> 6.</span> <span class="syntax">ENDCASE</span>
+                </code>
+              </div>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>Iteration (Looping)</h3>
+          <ul>
+            <li>using FOR</li>
+            <ul>
+              <li>
+                <div class="code-container">
+                  <code>
+                  <span class="line-number"> 1.</span> <span class="syntax">FOR</span> i <span class="syntax"> = </span> 1 <span class="syntax">TO</span> endValue <br>
+                  <span class="line-number"> 2.</span>     <span class="comment"># code</span> <br>
+                  <span class="line-number"> 3.</span> <span class="syntax">NEXT</span> i
+                  </code>
+                </div>
+              </li>
+            </ul>
+            <li>using WHILE</li>
+            <ul>
+              <li>
+                <div class="code-container">
+                  <code>
+                  <span class="line-number"> 1.</span> <span class="syntax">WHILE</span> <span class="condition">condition</span> <br>
+                  <span class="line-number"> 2.</span>     <span class="comment"># code</span> <br>
+                  <span class="line-number"> 3.</span> <span class="syntax">ENDWHILE</span>
+                  </code>
+                </div>
+              </li>
+            </ul>
+            <li>using REPEAT</li>
+            <ul>
+              <li>
+                <div class="code-container">
+                  <code>
+                  <span class="line-number"> 1.</span> <span class="syntax">REPEAT</span> <br>
+                  <span class="line-number"> 2.</span>     <span class="comment"># code</span> <br>
+                  <span class="line-number"> 3.</span> <span class="syntax">UNTIL</span> <span class="condition">condition</span>
+                  </code>
+                </div>
+              </li>
+            </ul>
+          </ul>
+        </li>
+      </ul>
+
+    </details>
+
+    <details>
+      <summary>Ideal Codes</summary>
+      <ul>
+        <li>
+          <details>
+            <summary>Finding maximum, minimum, total and average of an array</summary>
+            <ul>
+              <li>
+                <div class="code-container">
+                  <code>
+                  <span class="line-number"> 1.</span> <span class="syntax">DECLARE</span> arrayLength<span class="syntax">: </span> <span class="data-type">INTEGER</span> <br>
+                  <span class="line-number"> 2.</span> <span class="syntax">OUTPUT</span> <span class="string">"Enter list length"</span> <br>
+                  <span class="line-number"> 3.</span> <span class="syntax">INPUT</span> arrayLength <br>
+                  <span class="line-number"> 4.</span> <br>
+                  <span class="line-number"> 5.</span> <span class="comment"># Declaring rest of variables</span> <br>
+                  <span class="line-number"> 6.</span> <span class="syntax">DECLARE</span> list<span class="syntax">:</span> <span class="data-type">ARRAY</span><span class="syntax">[</span>1 <span class="syntax">:</span> arrayLength<span class="syntax">] OF</span> <span class="data-type">REAL</span> <br>
+                  <span class="line-number"> 7.</span> <span class="syntax">DECLARE</span> maximum<span class="syntax">:</span> <span class="data-type">INTEGER</span> <span class="syntax"> = </span> -9999 <span class="comment"># very low number (that will never be reached)</span>  <br>
+                  <span class="line-number"> 8.</span> <span class="syntax">DECLARE</span> minimum<span class="syntax">:</span> <span class="data-type">INTEGER</span> <span class="syntax"> = </span> 9999 <span class="comment"># very high number (that will never be reached)</span>  <br>
+                  <span class="line-number"> 9.</span> <span class="syntax">DECLARE</span> total<span class="syntax">:</span> <span class="data-type">INTEGER</span> <span class="syntax"> = </span> 0 <br>
+                  <span class="line-number">10.</span> <span class="syntax">DECLARE</span> num<span class="syntax">:</span> <span class="data-type">INTEGER</span> <br>
+                  <span class="line-number">11.</span> <br>
+                  <span class="line-number">12.</span> <span class="comment"># Input the list array elements</span>  <br>
+                  <span class="line-number">13.</span> <span class="syntax">FOR</span> i <span class="syntax"> = </span> 1 <span class="syntax">TO</span> arrayLength  <br>
+                  <span class="line-number">14.</span>     <span class="syntax">OUTPUT</span> <span class="string">"Enter list element number "</span><span class="syntax">,</span> i <br>
+                  <span class="line-number">15.</span>     <span class="syntax">INPUT</span> num <br>
+                  <span class="line-number">16.</span>     list<span class="syntax">[</span>i<span class="syntax">] =</span> num <br>
+                  <span class="line-number">17.</span> <span class="syntax">NEXT</span> i <br>
+                  <span class="line-number">18.</span> <br>
+                  <span class="line-number">19.</span> <span class="syntax">FOR</span> i <span class="syntax"> = </span> 1 <span class="syntax">TO</span> arrayLength <br>
+                  <span class="line-number">20.</span>     <span class="syntax">IF</span> list<span class="syntax">[</span>i<span class="syntax">] ></span> maximum <span class="syntax">THEN</span> <br>
+                  <span class="line-number">21.</span>         maximum <span class="syntax"> = </span> list<span class="syntax">[</span>i<span class="syntax">]</span> <br>
+                  <span class="line-number">22.</span>     <span class="syntax">ENDIF</span> <br>
+                  <span class="line-number">23.</span>     <br>
+                  <span class="line-number">24.</span>     <span class="syntax">IF</span> list<span class="syntax">[</span>i<span class="syntax">] ></span> minimum <span class="syntax">THEN</span> <br>
+                  <span class="line-number">25.</span>         minimum <span class="syntax"> = </span> list<span class="syntax">[</span>i<span class="syntax">]</span> <br>
+                  <span class="line-number">26.</span>     <span class="syntax">ENDIF</span> <br>
+                  <span class="line-number">27.</span> <br>
+                  <span class="line-number">28.</span>     total <span class="syntax"> = </span> total <span class="syntax"> + </span> list<span class="syntax">[</span>i<span class="syntax">]</span> <br>
+                  <span class="line-number">29.</span> <span class="syntax">NEXT</span> i <br>
+                  <span class="line-number">30.</span> <br>
+                  <span class="line-number">31.</span> <span class="comment"># outputting the results </span><br>
+                  <span class="line-number">32.</span> <span class="syntax">OUTPUT</span> <span class="string">"The maximum number is: "</span><span class="syntax">,</span> maximum <br>
+                  <span class="line-number">33.</span> <span class="syntax">OUTPUT</span> <span class="string">"The minimum number is: "</span><span class="syntax">,</span> minimum <br>
+                  <span class="line-number">34.</span> <span class="syntax">OUTPUT</span> <span class="string">"The total is: "</span><span class="syntax">,</span> total <br>
+                  <span class="line-number">35.</span> <span class="syntax">OUTPUT</span> <span class="string">"The average is:"</span><span class="syntax">,</span> total <span class="syntax">/</span> arrayLength <br>
+                  </code>
+                </div>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Bubble Sort for an array</summary>
+            <ul>
+              <li>
+                <div class="code-container">
+                  <code>
+                  <span class="line-number"> 1.</span> <span class="syntax">DECLARE</span> arrayLength<span class="syntax">:</span> <span class="data-type">INTEGER</span> <br>
+                  <span class="line-number"> 2.</span> <span class="syntax">OUTPUT</span> <span class="string">"Enter list length"</span>  <br>
+                  <span class="line-number"> 3.</span> <span class="syntax">INPUT</span> arrayLength <br>
+                  <span class="line-number"> 4.</span> <br>
+                  <span class="line-number"> 5.</span> <span class="comment"># Declaring rest of variables</span> <br>
+                  <span class="line-number"> 6.</span> <span class="syntax">DECLARE</span> list<span class="syntax">:</span> <span class="data-type">ARRAY</span><span class="syntax">[</span>1 <span class="syntax">:</span> arrayLength<span class="syntax">] OF</span> <span class="data-type">REAL</span> <br>
+                  <span class="line-number"> 7.</span> <span class="syntax">DECLARE</span> num<span class="syntax">:</span> <span class="data-type">INTEGER</span> <br>
+                  <span class="line-number"> 8.</span> <br>
+                  <span class="line-number"> 9.</span> <span class="comment"># Input the list array elements</span> <br>
+                  <span class="line-number">10.</span> <span class="syntax">FOR</span> i <span class="syntax"> = </span> 1 <span class="syntax">TO</span> arrayLength  <br>
+                  <span class="line-number">11.</span>     <span class="syntax">OUTPUT</span> <span class="string">"Enter list element number "</span><span class="syntax">,</span> i <br>
+                  <span class="line-number">12.</span>     <span class="syntax">INPUT</span> num <br>
+                  <span class="line-number">13.</span>     list<span class="syntax">[</span>i<span class="syntax">] = </span> num <br>
+                  <span class="line-number">14.</span> <span class="syntax">NEXT</span> i <br>
+                  <span class="line-number">15.</span> <br>
+                  <span class="line-number">16.</span> <span class="comment"># Sorting the list ascending</span> <br>
+                  <span class="line-number">17.</span> <span class="syntax">DECLARE</span> flag<span class="syntax">:</span> <span class="data-type">BOOLEAN</span> <span class="syntax"> = </span> true <br>
+                  <span class="line-number">18.</span> <span class="syntax">WHILE</span> flag <span class="syntax"> = </span> true  <br>
+                  <span class="line-number">19.</span>     flag <span class="syntax"> = </span> false  <br>
+                  <span class="line-number">20.</span>     <span class="syntax">FOR</span> i <span class="syntax"> = </span> 2 <span class="syntax">TO</span> arrayLength <br>
+                  <span class="line-number">21.</span>         <span class="syntax">IF</span> list<span class="syntax">[</span>i<span class="syntax">] <</span> list<span class="syntax">[</span>i<span class="syntax">-</span>1<span class="syntax">] THEN</span> <span class="comment"># change the < to > if you want to sort descending</span>  <br>
+                  <span class="line-number">22.</span>             <span class="syntax">DECLARE</span> swap<span class="syntax">:</span> INTEGER <span class="syntax"> = </span> list<span class="syntax">[</span>i<span class="syntax">]</span> <br>
+                  <span class="line-number">23.</span>             list<span class="syntax">[</span>i<span class="syntax">] = </span> list<span class="syntax">[</span>i<span class="syntax">-</span>1<span class="syntax">]</span> <br>
+                  <span class="line-number">24.</span>             list<span class="syntax">[</span>i<span class="syntax">] = </span> swap <br>
+                  <span class="line-number">25.</span>             flag <span class="syntax"> = </span> true <br>
+                  <span class="line-number">26.</span>         <span class="syntax">ENDIF</span> <br>
+                  <span class="line-number">27.</span>     <span class="syntax">NEXT</span> i <br>
+                  <span class="line-number">28.</span> <span class="syntax">ENDWHILE</span> <br>
+                  <span class="line-number">29.</span> <br>
+                  <span class="line-number">30.</span> <span class="comment"># outputting the sorted list</span>  <br>
+                  <span class="line-number">31.</span> <span class="syntax">OUTPUT</span> <span class="string">"Sorted list:"</span><span class="syntax">,</span> i <br>
+                  <span class="line-number">32.</span> <span class="syntax">FOR</span> i <span class="syntax"> = </span> 1 <span class="syntax">TO</span> arrayLength  <br>
+                  <span class="line-number">33.</span>     <span class="syntax">OUTPUT</span> list<span class="syntax">[</span>i<span class="syntax">]</span> <br>
+                  <span class="line-number">34.</span> <span class="syntax">NEXT</span> i<br>
+                  </code>
+                </div>
+              </li>
+            </ul>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Liner search for an array</summary>
+            <ul>
+              <li>
+                <div class="code-container">
+                  <code>
+                  <span class="line-number"> 1.</span> <span class="comment"># Inputting the array length</span> <br>
+                  <span class="line-number"> 2.</span> <span class="syntax">DECLARE</span> arrayLength<span class="syntax">:</span> <span class="data-type">INTEGER</span> <br>
+                  <span class="line-number"> 3.</span> <span class="syntax">OUTPUT</span> <span class="string">"Enter list length"</span> <br>
+                  <span class="line-number"> 4.</span> <span class="syntax">INPUT</span> arrayLength <br>
+                  <span class="line-number"> 5.</span> <br>
+                  <span class="line-number"> 6.</span> <span class="comment"># Declaring the rest of variables</span>  <br>
+                  <span class="line-number"> 7.</span> <span class="syntax">DECLARE</span> list<span class="syntax">:</span> <span class="data-type">ARRAY</span><span class="syntax">[</span>1 <span class="syntax">:</span> arrayLength<span class="syntax">] OF</span> <span class="data-type">REAL</span> <br>
+                  <span class="line-number"> 8.</span> <span class="syntax">DECLARE</span> index<span class="syntax">:</span> <span class="data-type">INTEGER</span> <span class="syntax"> = </span> 1  <br>
+                  <span class="line-number"> 9.</span> <span class="syntax">DECLARE</span> found<span class="syntax">:</span> <span class="data-type">BOOL</span> <span class="syntax"> = </span> False <br>
+                  <span class="line-number">10.</span> <span class="syntax">DECLARE</span> num<span class="syntax">:</span> <span class="data-type">INTEGER</span> <br>
+                  <span class="line-number">11.</span> <br>
+                  <span class="line-number">12.</span> <span class="comment"># Input the list array elements</span> <br>
+                  <span class="line-number">13.</span> <span class="syntax">FOR</span> i <span class="syntax"> = </span> 1 <span class="syntax">TO</span> arrayLength  <br>
+                  <span class="line-number">14.</span>     <span class="syntax">OUTPUT</span> <span class="string">"Enter list element number "</span><span class="syntax">, </span> i <br>
+                  <span class="line-number">15.</span>     <span class="syntax">INPUT</span> num <br>
+                  <span class="line-number">16.</span>     list<span class="syntax">[</span>i<span class="syntax">] = </span> num <br>
+                  <span class="line-number">17.</span> <span class="syntax">NEXT</span> i <br>
+                  <span class="line-number">18.</span> <br>
+                  <span class="line-number">19.</span> <span class="comment"># Input number to find</span> <br>
+                  <span class="line-number">20.</span> <span class="syntax">OUTPUT</span> <span class="string">"Enter the number to find."</span>  <br>
+                  <span class="line-number">21.</span> <span class="syntax">INPUT</span> num <br>
+                  <span class="line-number">22.</span> <br>
+                  <span class="line-number">23.</span> <span class="comment"># Looping to find the number</span> <br>
+                  <span class="line-number">24.</span> <span class="syntax">WHILE</span> found <span class="syntax"> = </span> false <span class="syntax"> AND </span> index <span class="syntax"><=</span> arrayLength  <br>
+                  <span class="line-number">25.</span>     <span class="syntax">IF</span> num <span class="syntax"> = </span> list<span class="syntax">[</span>index<span class="syntax">] THEN</span> <br>
+                  <span class="line-number">26.</span>         found <span class="syntax"> = </span> true <br>
+                  <span class="line-number">27.</span>     <span class="syntax">ENDIF</span> <br>
+                  <span class="line-number">28.</span>     index <span class="syntax"> = </span> index <span class="syntax"> + </span> 1 <br>
+                  <span class="line-number">29.</span> <span class="syntax">ENDWHILE</span> <br>
+                  <span class="line-number">30.</span> <br>
+                  <span class="line-number">31.</span> <span class="comment"># Outputting the result</span> <br>
+                  <span class="line-number">32.</span> <span class="syntax">IF</span> found <span class="syntax"> = </span> true <span class="syntax">THEN</span>  <br>
+                  <span class="line-number">33.</span>     <span class="syntax">OUTPUT</span> <span class="string">"The number is found and it's index is "</span><span class="syntax">,</span> index  <br>
+                  <span class="line-number">34.</span> <span class="syntax">ELSE</span>  <br>
+                  <span class="line-number">35.</span>     <span class="syntax">OUTPUT</span> "The number was not found"<br>
+                  <span class="line-number">36.</span> <span class="syntax">ENDIF</span> 
+                  </code>
+                </div>
+              </li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </details>
+  </main>
+  <footer>
+    <h3><a href="http://www.github.com/ZiedDev" target="_blank">Zied</a> ● <a href="http://www.github.com/ZiedDev"
+        target="_blank">Repository</a> ● <span class="blue">2024 ©</span> </h3>
+  </footer>
+</body>
+
+</html>

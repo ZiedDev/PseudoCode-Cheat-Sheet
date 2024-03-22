@@ -1,0 +1,175 @@
+@font-face {
+    font-family: "Mona Sans";
+    src: url("./fonts/Mona Sans/Mona-Sans.ttf");
+}
+
+@font-face {
+    font-family: 'Miracode';
+    src: url("./fonts/Miracode/Miracode.ttf");
+}
+
+html,
+body {
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    min-height: 100dvh;
+
+    background-color: #0D1117;
+}
+
+body * {
+    color: aliceblue;
+    font-family: "Miracode", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 5rem;
+    padding-top: 0.5rem;
+    background-color: #010409;
+    border-bottom: 3pt solid aliceblue;
+    padding-bottom: 3pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0%;
+}
+
+header::after {
+    content: '';
+    background-image: linear-gradient(to bottom, #010409 0%, #00000000 100%);
+    top: 100%;
+    height: 2rem;
+    width: 100%;
+    position: absolute;
+}
+
+
+header>h1 {
+    margin: 0;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    height: 5rem;
+    background-color: #010409;
+    border-top: 3pt solid aliceblue;
+    padding-top: 3pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0%;
+}
+
+footer::after {
+    content: '';
+    background-image: linear-gradient(to top, #010409 0%, #00000000 100%);
+    bottom: 100%;
+    height: 2rem;
+    width: 100%;
+    position: absolute;
+}
+
+
+footer>h1 {
+    margin: 0;
+}
+
+main {
+    min-height: calc(100dvh - 12.5rem - 12pt);
+    width: 70%;
+    margin: 1rem auto;
+}
+
+.main-details {
+    display: flex;
+}
+
+summary {
+    cursor: pointer;
+    font-size: 24pt;
+    font-weight: bold;
+    padding: 0.5rem 0;
+}
+
+h4 {
+    font-weight: normal;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+    margin: 0.5rem;
+}
+
+li>details>summary {
+    font-size: 18pt;
+    font-weight: bold;
+    padding: 0.5rem 0;
+}
+
+.code-container {
+    overflow-x: auto;
+    width: 95%;
+    padding: 1rem 0.5rem;
+    border-radius: 1rem;
+    margin: 1rem 0.5rem 2rem 0.5rem;
+    background-color: #010409;
+
+    box-shadow: 0 0 25px#010409;
+}
+
+code {
+    width: fit-content;
+    white-space: nowrap;
+    line-height: 2rem;
+}
+
+.line-number,
+.comment {
+    color: rgba(240, 248, 255, 0.35);
+}
+
+.data-type {
+    color: #948ae3;
+}
+
+.syntax {
+    color: #fc618d;
+}
+
+.string {
+    color: #fce566;
+}
+
+a,
+.blue {
+    color: #76a6d0;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: 2pt underline;
+}
+
+@media screen and (max-width: 1024px) {
+    main {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        width: 95%;
+    }
+
+    ul {
+        padding-left: 0.25rem;
+    }
+}
