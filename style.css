@@ -119,7 +119,7 @@ li>details>summary {
 .code-container {
     overflow-x: auto;
     width: 95%;
-    padding: 1rem 0.5rem;
+    padding: 1rem 1rem;
     border-radius: 1rem;
     margin: 1rem 0.5rem 2rem 0.5rem;
     background-color: #010409;
