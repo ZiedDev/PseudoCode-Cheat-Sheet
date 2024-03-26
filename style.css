@@ -40,6 +40,7 @@ header {
 }
 
 header::after {
+    pointer-events: none;
     content: '';
     background-image: linear-gradient(to bottom, #010409 0%, #00000000 100%);
     top: 100%;
@@ -47,7 +48,6 @@ header::after {
     width: 100%;
     position: absolute;
 }
-
 
 header>h1 {
     margin: 0;
@@ -68,6 +68,7 @@ footer {
 }
 
 footer::after {
+    pointer-events: none;
     content: '';
     background-image: linear-gradient(to top, #010409 0%, #00000000 100%);
     bottom: 100%;
