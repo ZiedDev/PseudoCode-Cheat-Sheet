@@ -63,6 +63,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     position: sticky;
     top: 0%;
 }
@@ -78,13 +79,15 @@ footer::after {
 }
 
 
-footer>h1 {
+footer>h3 {
+    padding: 1rem;
+    line-height: 2rem;
     margin: 0;
 }
 
 main {
     background-color: #0D1117;
-    min-height: calc(100dvh - 12.5rem - 12pt);
+    min-height: calc(100dvh - 13.5rem - 12pt);
     width: 70%;
     padding: 1rem 15%;
     margin: 0 auto;

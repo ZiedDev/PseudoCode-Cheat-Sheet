@@ -199,6 +199,7 @@
         <li>
           <h3>Procedures</h3>
           <ul>
+            <li>Declaration</li>
             <li>
               <div class="code-container">
                 <code>
@@ -208,17 +209,35 @@
                 </code>
               </div>
             </li>
+            <li>Calling</li>
+            <li>
+              <div class="code-container">
+                <code>
+                  <span class="line-number"> 1.</span> <span class="syntax">Call</span> <span class="function">procedureName</span> <span class="comment"># without parameters</span> <br>
+                  <span class="line-number"> 2.</span> <span class="syntax">Call</span> <span class="function">procedureName</span> <span class="syntax">(</span><var>parameter</var><span class="syntax">,</span> <span class="comment">...</span><span class="syntax">)</span> <span class="comment"># with parameters</span> <br>
+                </code>
+              </div>
+            </li>
           </ul>
         </li>
         <li>
           <h3>Functions</h3>
           <ul>
+            <li>Declaration</li>
             <li>
               <div class="code-container">
                 <code>
-                  <span class="line-number"> 1.</span> <span class="syntax">FUNCTION</span> <span class="function">functionName</span> <span class="syntax">(</span><var>parameter</var> <span class="syntax">:</span> <span class="data-type">DataType</span><span class="syntax">,</span> <span class="comment">...</span><span class="syntax">)</span> <span class="syntax">RETURNS</span> <span class="data-type">DataType</span> <br>
-                  <span class="line-number"> 2.</span>     <span class="syntax">RETURN</span> <span class="comment"># value to return</span> <br>
+                  <span class="line-number"> 1.</span> <span class="syntax">FUNCTION</span> <span class="function">functionName</span> <span class="syntax">(</span><var>parameter</var> <span class="syntax">:</span> <span class="data-type">DataType</span><span class="syntax">,</span> <span class="comment">...</span><span class="syntax">)</span> <br>
+                  <span class="line-number"> 2.</span>     <span class="comment"># code </span> <br>
                   <span class="line-number"> 3.</span> <span class="syntax">ENDFUNCTION</span>
+                </code>
+              </div>
+            </li>
+            <li>Calling</li>
+            <li>
+              <div class="code-container">
+                <code>
+                  <span class="line-number"> 1.</span> <span class="syntax">Call</span> <span class="function">functionName</span> <span class="syntax">(</span><var>parameter</var><span class="syntax">,</span> <span class="comment">...</span><span class="syntax">)</span> <span class="comment"># with parameters</span> <br>
                 </code>
               </div>
             </li>
@@ -270,7 +289,7 @@
                 </div>
               </li>
             </ul>
-            <li><span class="function">RANDOM</span> -> return a random decimal between 0 and 1 inclusive</li>
+            <li><span class="function">RANDOM</span> -> Returns a random decimal between 0 and 1 inclusive</li>
             <ul>
               <li>
                 <div class="code-container">
@@ -330,8 +349,49 @@
             </ul>
           </ul>
         </li>
+        <li>
+          <h3>File Management</h3>
+          <ul>
+            <li>Declaration of needed variables</li>
+            <ul>
+              <div class="code-container">
+                <code>
+                  <span class="line-number"> 1.</span> <span class="syntax">DECLARE</span> <var>file</var><span class="syntax">:</span> <span class="data-type">STRING</span> <span class="comment"># takes the path of the file for example "file.txt"</span> <br>
+                  <span class="line-number"> 2.</span> <span class="syntax">DECLARE</span> <var>variable</var><span class="syntax">:</span> <span class="data-type">STRING</span> <span class="comment"># this will take the values of each line read from the file</span>
+                </code>
+              </div>
+            </ul>
+          </ul>
+          <ul>
+            <li><span class="function">Read</span> -> To read a file line by line</li>
+            <ul>
+              <li>
+                <div class="code-container">
+                  <code>
+                    <span class="line-number"> 1.</span> <span class="function">OPENFILE</span> <var>file</var> <span class="syntax">FOR READ</span> <br>
+                    <span class="line-number"> 2.</span>     <span class="function">READFILE</span> <var>file</var><span class="syntax">,</span> <var>variable</var> <br>
+                    <span class="line-number"> 3.</span>     <span class="syntax">OUTPUT</span> <var>variable</var> <span class="comment"># you can output here though</span> <br>
+                    <span class="line-number"> 4.</span> <span class="function">CLOSEFILE</span> <var>file</var> 
+                  </code>
+                </div>
+              </li>
+            </ul>
+            <li><span class="function">Write</span> -> To write on a file line by line</li>
+            <ul>
+              <li>
+                <div class="code-container">
+                  <code>
+                    <span class="line-number"> 1.</span> <span class="function">OPENFILE</span> <var>file</var> <span class="syntax">FOR WRITE</span> <br>
+                    <span class="line-number"> 2.</span>     <span class="function">WRITEFILE</span> <var>file</var><span class="syntax">,</span> <var>variable</var> <br>
+                    <span class="line-number"> 3.</span>     <span class="syntax">OUTPUT</span> <var>variable</var> <span class="comment"># you can output here though</span> <br>
+                    <span class="line-number"> 4.</span> <span class="function">CLOSEFILE</span> <var>file</var> 
+                  </code>
+                </div>
+              </li>
+            </ul>
+          </ul>
+        </li>
       </ul>
-
     </details>
 
     <details>
@@ -448,7 +508,7 @@
                   <span class="line-number">20.</span>     <span class="syntax">FOR</span> <var>i</var> <span class="syntax"> = </span> 2 <span class="syntax">TO</span> <var>arrayLength</var> <br>
                   <span class="line-number">21.</span>         <span class="comment"># change the < to > if you want to sort descending</span> <br>
                   <span class="line-number">22.</span>         <span class="syntax">IF</span> <var>list</var><span class="syntax">[</span><var>i</var><span class="syntax">] <</span> <var>list</var><span class="syntax">[</span><var>i</var><span class="syntax">-</span>1<span class="syntax">] THEN</span> <br>
-                  <span class="line-number">23.</span>             <span class="syntax">DECLARE</span> <var>swap</var><span class="syntax">:</span> INTEGER <span class="syntax"> = </span> <var>list</var><span class="syntax">[</span>i<span class="syntax">]</span> <br>
+                  <span class="line-number">23.</span>             <span class="syntax">DECLARE</span> <var>swap</var><span class="syntax">:</span> <span class="data-type">INTEGER</span> <span class="syntax"> = </span> <var>list</var><span class="syntax">[</span>i<span class="syntax">]</span> <br>
                   <span class="line-number">24.</span>             <var>list</var><span class="syntax">[</span><var>i</var><span class="syntax">] = </span> <var>list</var><span class="syntax">[</span><var>i</var><span class="syntax">-</span>1<span class="syntax">]</span> <br>
                   <span class="line-number">25.</span>             <var>list</var><span class="syntax">[</span><var>i</var> <span class="syntax">-</span> 1<span class="syntax">] = </span> swap <br>
                   <span class="line-number">26.</span>             <var>flag</var> <span class="syntax"> = </span> true <br>
@@ -521,8 +581,10 @@
     </details>
   </main>
   <footer>
-    <h3> <span class="blue">© 2024</span> ● <a href="http://www.github.com/ZiedDev/PseudoCode-Cheat-Sheet/"
-        target="_blank">Repository</a> ● <a href="http://www.github.com/ZiedDev" target="_blank">Zied</a> </h3>
+    <h3> <span class="blue">© 2024</span> ● <a href="http://www.github.com/ZiedDev" target="_blank">Made by Zied</a>
+      <br>
+      <a href="http://www.github.com/ZiedDev/PseudoCode-Cheat-Sheet/" target="_blank">Repository page</a>
+    </h3>
   </footer>
 </body>
 
