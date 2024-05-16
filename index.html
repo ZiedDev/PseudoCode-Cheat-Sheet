@@ -92,8 +92,9 @@
                 <li>
                   <div class="code-container">
                     <code>
-                    <span class="line-number"> 1.</span> <span class="syntax">IF</span> <span class="condition">condition</span> <span class="syntax">THEN</span> <br>
-                    <span class="line-number"> 2.</span>       <span class="comment"># code</span> <br>
+                    <span class="line-number"> 1.</span> <span class="syntax">IF</span> <span class="condition">condition</span> <br>
+                    <span class="line-number"> 2.</span>     <span class="syntax">THEN</span><br>
+                    <span class="line-number"> 3.</span>         <span class="comment"># code</span><br>
                     <span class="line-number"> 3.</span> <span class="syntax">ENDIF</span>
                     </code>
                   </div>
@@ -106,11 +107,12 @@
                 <li>
                   <div class="code-container">
                     <code>
-                    <span class="line-number"> 1.</span> <span class="syntax">IF</span> <span class="condition">condition</span> <span class="syntax">THEN</span> <br>
-                    <span class="line-number"> 2.</span>     <span class="comment"># code</span> <br>
-                    <span class="line-number"> 3.</span> <span class="syntax">ELSE</span> <br>
-                    <span class="line-number"> 4.</span>     <span class="comment"># code</span> <br>
-                    <span class="line-number"> 5.</span> <span class="syntax">ENDIF</span>
+                    <span class="line-number"> 1.</span> <span class="syntax">IF</span> <span class="condition">condition</span> <br>
+                    <span class="line-number"> 2.</span>     <span class="syntax">THEN</span> <br>
+                    <span class="line-number"> 3.</span>        <span class="comment"># code</span> <br>
+                    <span class="line-number"> 4.</span>     <span class="syntax">ELSE</span> <br>
+                    <span class="line-number"> 5.</span>         <span class="comment"># code</span> <br>
+                    <span class="line-number"> 6.</span> <span class="syntax">ENDIF</span>
                     </code>
                   </div>
                 </li>
@@ -122,13 +124,17 @@
                 <li>
                   <div class="code-container">
                     <code>
-                    <span class="line-number"> 1.</span> <span class="syntax">IF</span> <span class="condition">condition</span> <span class="syntax">THEN</span> <br>
-                    <span class="line-number"> 2.</span>     <span class="comment"># code</span> <br>
-                    <span class="line-number"> 3.</span> <span class="syntax">ELSE IF</span> <span class="condition">condition</span> <span class="syntax">THEN</span> <br>
-                    <span class="line-number"> 4.</span>     <span class="comment"># code</span> <br>
-                    <span class="line-number"> 5.</span> <span class="syntax">ELSE</span> <br>
-                    <span class="line-number"> 6.</span>     <span class="comment"># code</span> <br>
-                    <span class="line-number"> 7.</span> <span class="syntax">ENDIF</span>
+                    <span class="line-number">  1.</span> <span class="syntax">IF</span> <span class="condition">condition</span> <br>
+                    <span class="line-number">  2.</span>     <span class="syntax">THEN</span> <br>
+                    <span class="line-number">  3.</span>         <span class="comment"># code</span> <br>
+                    <span class="line-number">  4.</span>     <span class="syntax">ELSE <br>
+                    <span class="line-number">  5.</span>         IF</span> <span class="condition">condition</span> <br>
+                    <span class="line-number">  6.</span>             <span class="syntax">THEN</span> <br>
+                    <span class="line-number">  7.</span>                 <span class="comment"># code</span> <br>
+                    <span class="line-number">  8.</span>             <span class="syntax">ELSE</span> <br>
+                    <span class="line-number">  9.</span>                 <span class="comment"># code</span> <br>
+                    <span class="line-number"> 10.</span>         <span class="syntax">ENDIF</span> <br>
+                    <span class="line-number"> 11.</span> <span class="syntax">ENDIF</span>
                     </code>
                   </div>
                 </li>
@@ -175,7 +181,7 @@
               <li>
                 <div class="code-container">
                   <code>
-                  <span class="line-number"> 1.</span> <span class="syntax">WHILE</span> <span class="condition">condition</span> <br>
+                  <span class="line-number"> 1.</span> <span class="syntax">WHILE</span> <span class="condition">condition</span> <span class="syntax">DO</span> <br>
                   <span class="line-number"> 2.</span>     <span class="comment"># code</span> <br>
                   <span class="line-number"> 3.</span> <span class="syntax">ENDWHILE</span>
                   </code>
@@ -410,7 +416,7 @@
                     <span class="line-number"> 2.</span> <br>
                     <span class="line-number"> 3.</span> <span class="syntax">INPUT</span> <var>inputVar</var> <br>
                     <span class="line-number"> 4.</span> <br>
-                    <span class="line-number"> 5.</span> <span class="syntax">WHILE</span> <var>inputVar</var> <span class="syntax"><</span> 0 <span class="syntax">OR</span> <var>inputVar</var> <span class="syntax"><></span> <span class="function">INT</span><span class="syntax">(</span><var>inputVar</var><span class="syntax">)</span> <br>
+                    <span class="line-number"> 5.</span> <span class="syntax">WHILE</span> <var>inputVar</var> <span class="syntax"><</span> 0 <span class="syntax">OR</span> <var>inputVar</var> <span class="syntax"><></span> <span class="function">INT</span><span class="syntax">(</span><var>inputVar</var><span class="syntax">)</span> <span class="syntax">DO</span> <br>
                     <span class="line-number"> 6.</span>     <span class="syntax">INPUT</span> <var>inputVar</var> <br>
                     <span class="line-number"> 7.</span> <span class="syntax">ENDWHILE</span>
                   </code>
@@ -503,7 +509,7 @@
                   <span class="line-number">15.</span> <br>
                   <span class="line-number">16.</span> <span class="comment"># Sorting the list ascending</span> <br>
                   <span class="line-number">17.</span> <span class="syntax">DECLARE</span> <var>flag</var><span class="syntax">:</span> <span class="data-type">BOOLEAN</span> <span class="syntax"> = </span> true <br>
-                  <span class="line-number">18.</span> <span class="syntax">WHILE</span> <var>flag</var> <span class="syntax"> = </span> true  <br>
+                  <span class="line-number">18.</span> <span class="syntax">WHILE</span> <var>flag</var> <span class="syntax"> = </span> true <span class="syntax">DO</span> <br>
                   <span class="line-number">19.</span>     <var>flag</var> <span class="syntax"> = </span> false  <br>
                   <span class="line-number">20.</span>     <span class="syntax">FOR</span> <var>i</var> <span class="syntax"> = </span> 2 <span class="syntax">TO</span> <var>arrayLength</var> <br>
                   <span class="line-number">21.</span>         <span class="comment"># change the < to > if you want to sort descending</span> <br>
@@ -557,7 +563,7 @@
                   <span class="line-number">21.</span> <span class="syntax">INPUT</span> <var>num</var> <br>
                   <span class="line-number">22.</span> <br>
                   <span class="line-number">23.</span> <span class="comment"># Looping to find the number</span> <br>
-                  <span class="line-number">24.</span> <span class="syntax">WHILE</span> <var>found</var> <span class="syntax"> = </span> false <span class="syntax"> AND </span> <var>index</var> <span class="syntax"><=</span> <var>arrayLength</var>  <br>
+                  <span class="line-number">24.</span> <span class="syntax">WHILE</span> <var>found</var> <span class="syntax"> = </span> false <span class="syntax"> AND </span> <var>index</var> <span class="syntax"><=</span> <var>arrayLength</var> <span class="syntax">DO</span> <br>
                   <span class="line-number">25.</span>     <span class="syntax">IF</span> <var>num</var> <span class="syntax"> = </span> <var>list</var><span class="syntax">[</span><var>index</var><span class="syntax">] THEN</span> <br>
                   <span class="line-number">26.</span>         <var>found</var> <span class="syntax"> = </span> true <br>
                   <span class="line-number">27.</span>     <span class="syntax">ELSE</span> <br>
