@@ -93,10 +93,6 @@ main {
     margin: 0 auto;
 }
 
-.main-details {
-    display: flex;
-}
-
 summary {
     cursor: pointer;
     font-size: 24pt;
